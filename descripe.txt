@@ -1,0 +1,21 @@
+The project is to classify passersby from photos using the Linear SVM + HOG features. One of the publicly available datasets: inria pedestian, daimler pedestrian etc.
+The project should use scikit-image and scikit-learn.
+
+
+Blog post:
+* Introduction to HOG (histogram of oriented gradients)
+* HOG Imagery example - image with calculated values ​​like http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_hog.html#sphx-glr-auto-examples-features-detection-plot-hog-py
+* Briefly describe the data set
+* Mention the SVM algorithm, without a long translation give 3 links to other SVM sites
+* Description of the project (code) - what is the workout, what are the lines of code, code mixed with comments describing what is doing
+
+
+Project:
+* Code in python and scikitlearn, scikit-image (not in opencv)
+* Hog'i calculation code for images
+* Apply Non-Maximum Suppression to select the final best window
+* Code using linear SVM to learn the model (sliding window technique) (divide the collection into test and train, add a reasonable number of images to the collection set so that the model does not count for too long and to give reasonable results)
+* Code displaying classification results on a test set
+* Make a 600 character readme.md file describing the design (it should be nicely described and divided into sections, it should contain min 4 links to external material that may be helpful for further study
+* The project should be logically divided into files
+* Code should be abundantly commented

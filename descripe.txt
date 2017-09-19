@@ -18,4 +18,4 @@ Project:
 * Code displaying classification results on a test set
 * Make a 600 character readme.md file describing the design (it should be nicely described and divided into sections, it should contain min 4 links to external material that may be helpful for further study
 * The project should be logically divided into files
-* Code should be abundantly commented
+* Code should be abundantly commnted

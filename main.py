@@ -1,6 +1,1 @@
-# Import all modules
-
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn import svm
-from skimage.feature import hog
+import cv2

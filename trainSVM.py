@@ -51,29 +51,5 @@ lin_clf.fit(X, y)
 clf = svm.SVC()
 clf.fit(X, y)
 print('finish learning SVM.')
+print(clf.fit(X,y))
 joblib.dump(lin_clf, 'person_detector.pkl', compress=9)
-"""
-from sklearn import cross_validation
-from sklearn.cross_validation import train_test_split
-from sklearn.grid_search import GridSearchCV
-from sklearn import svm
-from sklearn.externals import joblib
-print('start learning SVM.')
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
-
-tuned_parameters = [{'kernel': ['rbf'], 'gamma': [10**i for i in range(-4,0)], 'C': [10**i for i in range(1,4)]}]
-gscv = GridSearchCV(svm.SVC(), tuned_parameters, cv=5, scoring="mean_squared_error")
-gscv.fit(X_train, y_train)
-#一番スコア悪い&良い奴を出す
-params_min,_,_ = gscv.grid_scores_[np.argmin([x[1] for x in gscv.grid_scores_])]
-svm_best = gscv.best_estimator_
-print('start re-learning SVM with best parameter set.')
-svm_best.fit(X_train, y_train)
-
-print('finish learning SVM　with Grid-search and cross-varidation.')
-
-print('searched result of  C =')
-
-print('searched result of  gamma =')
-"""

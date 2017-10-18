@@ -48,8 +48,11 @@ from sklearn.externals import joblib
 print('start learning SVM.')
 lin_clf = svm.LinearSVC()
 lin_clf.fit(X, y)
-clf = svm.SVC()
-clf.fit(X, y)
+#clf = svm.SVC()
+#clf.fit(X, y)
 print('finish learning SVM.')
-print(clf.fit(X,y))
+print(lin_clf.fit(X,y))
+print(lin_clf.score(X,y))
+
 joblib.dump(lin_clf, 'person_detector.pkl', compress=9)
+

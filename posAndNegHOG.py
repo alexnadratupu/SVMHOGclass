@@ -44,3 +44,4 @@ plt.subplot(144).set_axis_off()
 plt.imshow(neg_hog_image, cmap=plt.cm.gray)
 plt.title('Negative HOG')
 plt.show()
+
